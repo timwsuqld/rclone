@@ -120,7 +120,7 @@ func verifyAud(aud []string, cmp string, required bool) bool {
 		if subtle.ConstantTimeCompare([]byte(a), []byte(cmp)) != 0 {
 			result = true
 		}
-		stringClaims = stringClaims + a
+		stringClaims += a
 	}
 
 	// case where "" is sent in one or many aud claims
